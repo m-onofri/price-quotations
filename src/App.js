@@ -5,6 +5,7 @@ import Rooming from './components/Rooming.js';
 import Listini from './components/Listini.js';
 import Prezzi from './components/Prezzi.js';
 import Resume from './components/Resume.js';
+import TotalAmount from './components/TotalAmount.js';
 import './App.css';
 
 class App extends Component {
@@ -182,7 +183,7 @@ class App extends Component {
             <SelectListini
               value={this.state.listino}
               updateListino={this.updateListino}/>
-              <h1 id="totalAmount">Total: {this.totalAmount()} €</h1>
+              <TotalAmount total={this.totalAmount()}/>
           </div>
           <div id="second_section">
             <Rooming
