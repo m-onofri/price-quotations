@@ -3,7 +3,7 @@ import Dates from './components/Dates.js';
 import SelectListini from './components/SelectListini.js';
 import Rooming from './components/Rooming.js';
 import Listini from './components/Listini.js';
-import Prezzi from './components/Prezzi.js';
+import PricesList from './components/PricesList.js';
 import Resume from './components/Resume.js';
 import TotalAmount from './components/TotalAmount.js';
 import './App.css';
@@ -189,13 +189,10 @@ class App extends Component {
             <Rooming
               value={this.state.rooming}
               updateComposition={this.updateComposition}/>
-            {this.state.prices.map((price, i) => {
-              return <Prezzi
-                       days={this.state.days[i][1]}
-                       id={price[0]}
-                       value={price[1]}
-                       updatePrezzi={this.updatePrezzi}/>
-            })}
+            <PricesList
+              prices={this.state.prices}
+              days={this.state.days}
+              updatePrezzi={this.updatePrezzi}/>
           </div>
           <div id="resumeTable">
             <table>
