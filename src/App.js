@@ -4,7 +4,7 @@ import SelectListini from './components/SelectListini.js';
 import Rooming from './components/Rooming.js';
 import Listini from './components/Listini.js';
 import PricesList from './components/PricesList.js';
-import Resume from './components/Resume.js';
+import Table from './components/Table.js';
 import TotalAmount from './components/TotalAmount.js';
 import './App.css';
 
@@ -195,25 +195,11 @@ class App extends Component {
               updatePrezzi={this.updatePrezzi}/>
           </div>
           <div id="resumeTable">
-            <table>
-              <tr>
-                <th>Date</th>
-                <th>Adulti</th>
-                <th>Adulti 3-4 letto</th>
-                <th>Chd 3 letto</th>
-                <th>Chd 4 letto</th>
-                <th>Infant</th>
-                <th>Animali</th>
-                <th>Culla</th>
-                <th>Supp. singola</th>
-                <th>Total</th>
-              </tr>
-              <Resume
+              <Table
                 days={this.state.days}
                 prices={this.state.prices}
                 rooming={this.state.rooming}
                 total={this.totalAmount()}/>
-            </table>
           </div>
         </div>
       );
