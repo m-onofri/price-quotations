@@ -1,4 +1,5 @@
 import React from 'react';
+import RoomingElement from './RoomingElement.js';
 import PropTypes from 'prop-types';
 
 const Rooming = props =>
@@ -6,38 +7,14 @@ const Rooming = props =>
     <p style={{textAlign: "center"}}>Rooming</p>
     <p>______________________</p>
     <p>______________________</p>
-    <div className="rooming">
-      <label>adulti</label>
-      <input id="ad" type="number" value={props.value.ad} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>adulti 3-4 letto</label>
-      <input id="ad34" type="number" value={props.value.ad34} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>chd 3 letto</label>
-      <input id="chd3" type="number" value={props.value.chd3} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>chd 4 letto</label>
-      <input id="chd4" type="number" value={props.value.chd4} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>infant</label>
-      <input id="inf" type="number" value={props.value.inf} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>animal</label>
-      <input id="animal" type="number" value={props.value.animal} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>culla</label>
-      <input id="culla" type="number" value={props.value.culla} onChange={props.updateRooming}/>
-    </div>
-    <div className="rooming">
-      <label>Supp. singola</label>
-      <input id="sing" type="number" value={props.value.sing} onChange={props.updateRooming}/>
-    </div>
+    <RoomingElement title="adulti" id="ad" value={props.value.ad} updateRooming={props.updateRooming}/>
+    <RoomingElement title="adulti 3-4 letto" id="ad34" value={props.value.ad34} updateRooming={props.updateRooming}/>
+    <RoomingElement title="chd 3 letto" id="chd3" value={props.value.chd3} updateRooming={props.updateRooming}/>
+    <RoomingElement title="chd 4 letto" id="chd4" value={props.value.chd4} updateRooming={props.updateRooming}/>
+    <RoomingElement title="infant" id="inf" value={props.value.inf} updateRooming={props.updateRooming}/>
+    <RoomingElement title="animal" id="animal" value={props.value.animal} updateRooming={props.updateRooming}/>
+    <RoomingElement title="culla" id="culla" value={props.value.culla} updateRooming={props.updateRooming}/>
+    <RoomingElement title="supp. singola" id="sing" value={props.value.sing} updateRooming={props.updateRooming}/>
   </div>
 
 Rooming.propTypes = {
