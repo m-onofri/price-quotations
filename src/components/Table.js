@@ -1,5 +1,6 @@
 import React from 'react';
 import Resume from './Resume.js';
+import PropTypes from 'prop-types';
 
 const Table = props =>
 <table>
@@ -21,5 +22,12 @@ const Table = props =>
     rooming={props.rooming}
     total={props.total}/>
 </table>
+
+Table.propTypes = {
+  days: PropTypes.array.isRequired,
+  prices: PropTypes.array.isRequired,
+  rooming: PropTypes.object.isRequired,
+  total: PropTypes.number.isRequired
+}
 
 export default Table;

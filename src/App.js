@@ -195,11 +195,11 @@ class App extends Component {
               updatePrezzi={this.updatePrezzi}/>
           </div>
           <div id="resumeTable">
-              <Table
-                days={this.state.days}
-                prices={this.state.prices}
-                rooming={this.state.rooming}
-                total={this.totalAmount()}/>
+            <Table
+              days={this.state.days}
+              prices={this.state.prices}
+              rooming={this.state.rooming}
+              total={this.totalAmount()}/>
           </div>
         </div>
       );
