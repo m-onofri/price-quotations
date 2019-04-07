@@ -1,23 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Dates extends Component {
+const Dates = props =>
+  <>
+    <input
+      id="start"
+      type="date"
+      value={props.valueArr}
+      onChange={props.updateArrival} />
+    <input
+      id="end"
+      type="date"
+      value={props.valueDep}
+      onChange={props.updateDeparture} />
+  </>
 
-  render() {
-    return(
-      <>
-        <input
-          id="start"
-          type="date"
-          value={this.props.valueArr}
-          onChange={this.props.updateArrival} />
-        <input
-          id="end"
-          type="date"
-          value={this.props.valueDep}
-          onChange={this.props.updateDeparture} />
-      </>
-    );
-  }
+Dates.propTypes = {
+  valueArr: PropTypes.string.isRequired,
+  valueDep: PropTypes.string.isRequired,
+  updateArrival: PropTypes.func.isRequired,
+  updateDeparture: PropTypes.func.isRequired
 }
 
 export default Dates;
