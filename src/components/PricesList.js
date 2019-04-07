@@ -1,5 +1,6 @@
 import React from 'react';
 import Prices from './Prices.js';
+import PropTypes from 'prop-types';
 
 const PricesList = props =>
   <>
@@ -11,5 +12,11 @@ const PricesList = props =>
                updatePrezzi={props.updatePrezzi}/>
     })}
   </>
+
+PricesList.propTypes = {
+  prices: PropTypes.array.isRequired,
+  days: PropTypes.array.isRequired,
+  updatePrezzi: PropTypes.func.isRequired
+}
 
 export default PricesList;
