@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Resume extends Component {
-  renderDate = (timestamp) => {
+  renderDate = timestamp => {
     const date = new Date(timestamp);
     return `${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`;
   }
 
-  dailyAmount = (rooming, price) => {
-    return (rooming.ad * price.ad +
-            rooming.ad34 * price.ad34 +
-            rooming.chd3 * price.chd3 +
-            rooming.chd4 * price.chd4 +
-            rooming.inf * price.inf +
-            rooming.animal * price.animal +
-            rooming.culla * price.culla +
-            rooming.sing * price.sing);
-  }
+  dailyAmount = (rooming, price) =>
+    (rooming.ad * price.ad +
+    rooming.ad34 * price.ad34 +
+    rooming.chd3 * price.chd3 +
+    rooming.chd4 * price.chd4 +
+    rooming.inf * price.inf +
+    rooming.animal * price.animal +
+    rooming.culla * price.culla +
+    rooming.sing * price.sing);
 
   renderTable = (days, prices, rooming) => {
     let result = [];
@@ -58,7 +58,12 @@ class Resume extends Component {
       </>
     );
   }
+}
 
+Resume.propTypes = {
+  days: PropTypes.array.isRequired,
+  prices: PropTypes.array.isRequired,
+  rooming: PropTypes.object.isRequired
 }
 
 export default Resume;
