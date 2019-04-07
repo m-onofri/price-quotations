@@ -1,15 +1,11 @@
+/***GENERAL***/
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Chalkboard";
+  font-family: 'Acme', sans-serif;
   font-size: 15px;
-}
-
-.list {
-  display: flex;
-  flex-direction: column;
-}
-
-.list input {
-  margin: 0 15px;
 }
 
 p {
@@ -17,6 +13,24 @@ p {
   margin: 0;
 }
 
+/***FIRST SECTION***/
+#first_section {
+  background-color: #F75A5A;
+  padding: 20px 20px 0;
+  color: #fff;
+}
+
+#first_section input {
+  margin-right: 20px;
+}
+
+#totalAmount {
+  margin-top: 20px;
+  margin-left: 60px;
+  display: inline-block;
+}
+
+/***SECOND SECTION***/
 #second_section {
   background-color: #EC8F8F;
   display: flex;
@@ -39,22 +53,16 @@ p {
   margin-left: 15px;
 }
 
-#first_section {
-  background-color: #F75A5A;
-  padding: 20px 20px 0;
-  color: #fff;
+.list {
+  display: flex;
+  flex-direction: column;
 }
 
-#first_section input {
-  margin-right: 20px;
+.list input {
+  margin: 0 15px;
 }
 
-#totalAmount {
-  margin-top: 20px;
-  margin-left: 60px;
-  display: inline-block;
-}
-
+/***TABLE***/
 #resumeTable {
   padding: 20px;
   background-color: #F0CECE;

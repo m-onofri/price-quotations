@@ -149,7 +149,7 @@ class App extends Component {
     });
   }
 
-  updateComposition = (event) => {
+  updateRooming = (event) => {
     const rooming = this.state.rooming;
     const id = event.target.id;
     const value = parseInt(event.target.value);
@@ -188,7 +188,7 @@ class App extends Component {
           <div id="second_section">
             <Rooming
               value={this.state.rooming}
-              updateComposition={this.updateComposition}/>
+              updateRooming={this.updateRooming}/>
             <PricesList
               prices={this.state.prices}
               days={this.state.days}
